@@ -25,3 +25,11 @@ nav{
     padding:15px;
     border: 10px solid rgba(245, 70, 7, 0.911);
 }
+#historia{
+    background-image: 
+        url("media/globe-internet-icon-line-connection-circuit-board.jpg");
+
+}
+img{
+    height: 13vh;
+}
