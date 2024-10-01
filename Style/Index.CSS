@@ -19,17 +19,22 @@ nav{
     justify-content: space-around;
 }
 
-.tarjeta{
+.tarjeta{ 
     height: 15vh;
     background-color: rgb(0, 0, 0);
     padding:15px;
     border: 10px solid rgba(245, 70, 7, 0.911);
 }
 #historia{
-    background-image: 
-        url("media/globe-internet-icon-line-connection-circuit-board.jpg");
-
+    background-image: url("../Media/historia.webp");
+    background-size:72%;
+    height:100%;
+    
 }
-img{
-    height: 13vh;
+#Web_2{
+    background-image: url("../Media/globe-internet-icon-line-connection-circuit-board.jpg");
+    height: 16vh;
+    background-size:100%;
+    background-repeat: no-repeat;
+
 }
