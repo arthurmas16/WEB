@@ -6,7 +6,7 @@ header{
     text-align: center;
     color: rgb(230, 102, 11);
     margin: 10px;
-    border: 10px solid rgb(255, 115, 0);
+    border: 10px solid rgb(255, 102, 0);
 
 }
 
@@ -23,7 +23,7 @@ nav{
     height: 15vh;
     background-color: rgb(0, 0, 0);
     padding:15px;
-    border: 10px solid rgba(245, 70, 7, 0.911);
+    border: 30px solid rgba(224, 106, 9, 0.911);
 }
 #historia{
     background-image: url("../Media/historia.webp");
@@ -37,4 +37,17 @@ nav{
     background-size:100%;
     background-repeat: no-repeat;
 
+}
+#tecnologías{
+    background-image: url("../Media/DALL·E\ 2024-10-01\ 13.24.25\ -\ A\ futuristic\ scene\ showing\ various\ technologies\ in\ action.\ The\ image\ features\ a\ sleek\ city\ skyline\ with\ advanced\ buildings\,\ autonomous\ flying\ cars\,\ ho.webp");
+    height: 16vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#CMS{
+    background-image: url("../Media/web.jpg");
+    height: 16vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
 }
