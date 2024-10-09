@@ -1,3 +1,12 @@
 body{
-    background-color: blueviolet;
+    background-color: rgba(197, 165, 20, 0.952);
+}
+
+header{
+    background-color: azure;
+    text-align: center;
+}
+
+section{
+    
 }

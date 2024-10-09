@@ -24,6 +24,7 @@ nav{
     background-color: rgb(0, 0, 0);
     padding:15px;
     border: 30px solid rgba(224, 106, 9, 0.911);
+    color: aliceblue;
 }
 #historia{
     background-image: url("../Media/historia.webp");
@@ -43,6 +44,7 @@ nav{
     height: 16vh;
     background-size: 100%;
     background-repeat: no-repeat;
+
 }
 #CMS{
     background-image: url("../Media/web.jpg");
@@ -50,4 +52,8 @@ nav{
     background-size: 100%;
     background-repeat: no-repeat;
     
+}
+
+h4{ 
+    margin: -2px;
 }
