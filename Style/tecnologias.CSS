@@ -8,5 +8,8 @@ header{
 }
 
 section{
-    
+    background-color: aliceblue;
+    height: 50vh;
+    text-align: center;
+    display: flex;
 }
