@@ -1,16 +1,36 @@
 body{
-    background-color: brown;
-
+    background-color: rgba(153, 42, 23, 0.952);
+    
 }
+
 header{
-text-align: center;
-background-color: aliceblue;
-
+    background-color: aliceblue;
+    text-align: center;
 }
+
 section{
-background-color: aliceblue;
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
-font-size: smaller;
+    background-color: aliceblue;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    width:100vw;
+    
+}
+.imagen{
+    height: 50%;
+    width:100vw;
+}
+.texto{
+
+    height: 100%;
+    width: 40vw;
+}
+img{
+    height: 100%;
+    width:40vw;
+}
+.web{
+display: flex;
+align-items: center;
 
 }
