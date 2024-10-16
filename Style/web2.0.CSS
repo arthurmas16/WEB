@@ -5,4 +5,12 @@ body{
 header{
 text-align: center;
 background-color: aliceblue;
+
+}
+section{
+background-color: aliceblue;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+font-size: smaller;
+
 }
