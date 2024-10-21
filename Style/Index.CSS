@@ -57,3 +57,14 @@ nav{
 h4{ 
     margin: -2px;
 }
+
+@media (min-width: 920px) {
+    nav{
+        flex-direction: row;
+    }
+    .tarjeta{
+        border: 20px solid rgba(224, 106, 9, 0.911);
+        width: 15vw;
+    }
+}
+    
