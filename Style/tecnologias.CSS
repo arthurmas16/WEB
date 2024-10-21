@@ -19,7 +19,7 @@ section{
     padding: 5%;
 }
 img{
-    width: 33vw;
+    width: 33vw; 
     padding-left: 3%;
     
 }
@@ -30,4 +30,12 @@ img{
     display: flex;
    align-items: center;
 
+}
+@media ( max-width:720px){
+    .tecno{
+        flex-direction: column;
+    }
+    section{
+        height: 70vh;
+    }
 }
