@@ -19,15 +19,17 @@ section{
 .imagen{
     height: 50%;
     width:100vw;
+    padding-right: 20px;
 }
 .texto{
 
     height: 100%;
-    width: 40vw;
+    width: 50vw;
 }
 img{
     height: 100%;
-    width:40vw;
+    width:60vw;
+    
 }
 .web{
 display: flex;
