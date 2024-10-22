@@ -1,38 +1,41 @@
 body{
-    background-color: rgba(153, 42, 23, 0.952);
-    
+    background-color: rgba(139, 7, 7, 0.952);
 }
 
 header{
-    background-color: aliceblue;
+    background-color: azure;
     text-align: center;
 }
 
 section{
-    background-color: aliceblue;
-    height: 50vh;
+    background-color: rgb(255, 253, 252);
+    height: 40vh;
     text-align: center;
-    display: flex;
     width:100vw;
-    
-}
-.imagen{
-    height: 50%;
-    width:100vw;
-    padding-right: 20px;
 }
 .texto{
-
     height: 100%;
     width: 50vw;
+    padding: 5%;
 }
 img{
-    height: 100%;
-    width:60vw;
+    width: 33vw; 
+    padding-left: 3%;
     
 }
-.web{
-display: flex;
-align-items: center;
+.titulo{
+    text-align: center;
+}
+.tecno{
+    display: flex;
+   align-items: center;
 
+}
+@media ( max-width:720px){
+    .tecno{
+        flex-direction: column;
+    }
+    section{
+        height: 70vh;
+    }
 }
