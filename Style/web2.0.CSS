@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(139, 7, 7, 0.952);
+    background-color: rgb(141, 4, 4);
 }
 
 header{
@@ -8,8 +8,8 @@ header{
 }
 
 section{
-    background-color: rgb(255, 253, 252);
-    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.925);
+    
     text-align: center;
     width:100vw;
 }
@@ -20,13 +20,13 @@ section{
 }
 img{
     width: 33vw; 
-    padding-left: 3%;
-    
+    padding-left: 6%;
+    margin-top: 20px;
 }
 .titulo{
     text-align: center;
 }
-.tecno{
+.web2{
     display: flex;
    align-items: center;
 
