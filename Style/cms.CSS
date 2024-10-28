@@ -1,7 +1,41 @@
 body{
-    background-color: antiquewhite;
+    background-color: rgb(43, 141, 4);
 }
-button{
-    padding: 5px;  
-    margin: 10px;
+
+header{
+    background-color: azure;
+    text-align: center;
+}
+
+section{
+    background-color: rgba(255, 255, 255, 0.925);
+    
+    text-align: center;
+    width:100vw;
+}
+.texto{
+    height: 100%;
+    width: 50vw;
+    padding: 5%;
+}
+img{
+    width: 33vw; 
+    padding-left: 6%;
+    margin-top: 20px;
+}
+.titulo{
+    text-align: center;
+}
+.web2{
+    display: flex;
+   align-items: center;
+
+}
+@media ( max-width:720px){
+    .tecno{
+        flex-direction: column;
+    }
+    section{
+        height: 70vh;
+    }
 }
