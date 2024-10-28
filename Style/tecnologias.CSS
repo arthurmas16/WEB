@@ -36,6 +36,6 @@ img{
         flex-direction: column;
     }
     section{
-        height: 70vh;
+        height:100%;
     }
 }
