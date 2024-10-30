@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pulsado()">
+        click me
+      </button>
+    <button onclick="cambiarColor()" >
+        change style
+    </button>
+        <div>
+         <p></p>
+        </div>
+         <p></p>
+    <script>function pulsado(){
+        
+        var ps = document.getElementsByTagName("p")
+          ps[0].innerHTML = "Chorizo"
+          ps[1].innerHTML = "Bocata"
+        }
+    </script>
+    <script>function cambiarColor(){
+        var ps = document.getElementsByTagName("p")
+        ps[0].style.color = "orange"
+        ps[1].style.background = "orange"
+
+        
+    }  
+    </script>
+        
+</body>
+</html>
