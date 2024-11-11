@@ -7,7 +7,7 @@ var p1respuestas = document.getElementsByName("p1")
 var imgCheckp1 = document.getElementById("checkImg1")
 var checkp1 = false
 
-  if (p1respuestas[0].checked){
+  if (p1respuestas[0].checked)
     checkp1 = true
   
 }
@@ -17,7 +17,11 @@ if (checkp1){
 
 var p2respuestas = document.getElementsByName("p2")
 var imgElement = document.getElementById("checkImg2")
-for ()
+for (i=0; i<checkp1respuesta.length;i++){
+  if (!checkp1respuesta[i].checked){
+    checkp1 = false
+  }
+
 if (p2respuestas[0].checked){
   imgElement.src="../Media/checked.jpg"
 }else{imgElement.src="../Media/wrong.jpg"}
