@@ -1,0 +1,41 @@
+body{
+    background-color: aqua;
+   
+}
+header{
+ background-color: aliceblue;
+ text-align: center;
+}
+section{
+    background-color: aliceblue;
+    height: 100%;
+    text-align: center;
+    width:100vw;
+}
+.texto{
+    height: 100%;
+    width: 50vw;
+    padding: 5%;
+}
+img{
+    width: 33vw; 
+    padding-left: 3%;
+    
+}
+.titulo{
+    text-align: center;
+}
+.internet{
+    display: flex;
+   align-items: center;
+   margin-top: 20px;
+
+}
+@media ( max-width:720px){
+    .internet{
+        flex-direction: column;
+    }
+    section{
+        height:100%;
+    }
+}
