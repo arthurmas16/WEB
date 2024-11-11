@@ -1,0 +1,78 @@
+header{
+    background-color: rgb(14, 11, 2);
+    padding: 10px;
+    font-family: fantasy;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(212, 96, 14);
+    margin: 10px;
+    border: 10px solid rgb(255, 102, 0);
+
+}
+
+nav{
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tarjeta{   
+    height: 15vh;
+    background-color: rgb(0, 0, 0);
+    padding:15px;
+    border: 30px solid rgba(224, 106, 9, 0.911);
+    color: aliceblue;
+}
+.tarjeta:hover {
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    height: 16vh;
+  }
+  
+#historia{
+    background-image: url("../Media/historia.webp");
+    background-size:72%;
+    height:100%;
+    
+}
+#Web_2{
+    background-image: url("../Media/globe-internet-icon-line-connection-circuit-board.jpg");
+    height: 16vh;
+    background-size:100%;
+    background-repeat: no-repeat;
+
+}
+#tecnologías{
+    background-image: url("../Media/DALL·E\ 2024-10-01\ 13.24.25\ -\ A\ futuristic\ scene\ showing\ various\ technologies\ in\ action.\ The\ image\ features\ a\ sleek\ city\ skyline\ with\ advanced\ buildings\,\ autonomous\ flying\ cars\,\ ho.webp");
+    height: 16vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+#CMS{
+    background-image: url("../Media/web.jpg");
+    height: 16vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+h4{ 
+    margin: -2px;
+}
+
+
+@media (min-width: 920px) {
+    nav{
+        flex-direction: row;
+    }
+    .tarjeta{
+        border: 20px solid rgba(224, 106, 9, 0.911);
+        width: 15vw;
+    }
+}
+    
+
