@@ -15,7 +15,7 @@ function checkquiz(event){
     checkp1 = true
   }
   
-  //
+  //salen las imagenes si esta bien o mal la respuesta
   if (checkp1){
     imgCheckp1.src="../Media/checked.jpg"
   }
@@ -23,7 +23,7 @@ function checkquiz(event){
     imgCheckp1.src="../Media/wrong.jpg"
 
   }
-
+  //
   var p2respuestas = document.getElementsByName("p2")
   var imgElement = document.getElementById("checkImg2")
     for (i=0; i<checkp1respuesta.length;i++){

@@ -34,32 +34,62 @@
             <div class="imagen"> <img src="../Media/Python.webp" alt=""></div>
             <div class="texto" > La popularidad de Python se debe a que, además de tener una gran cantidad de librerías, es totalmente gratis. Asimismo, destaca por su sencillez y potencia, ya que usa menos líneas de código que cualquier otro lenguaje de programación para cualquier aplicación que se ejecute. Esto supone una gran ventaja respecto a otros tipos de lenguajes de programación y la constituye, sin duda, como una de las tecnologías web más usadas. </div>
      </section> 
+
      <section>
-        <form action="">
-            <label for="">
-                <p>¿Phyton es gratuito?</p>
-                <input type="radio" name="p1"> Sí <br>
-                <input type="radio" name="p1"> No <br>
-                </label>
-            <label for="">
-                <p>¿Para que sirve Javascript?</p>
-                <input type="checkbox" name="p2"> Formularios
-                <input type="checkbox" name="p2"> Juegos
-                <input type="checkbox" name="p2"> Webs
-            </label>
-            <br></br>
-            <p>
-              <input type="submit" value="¡Comprueba!"><br><br>
-              <input type="reset" value="Limpiar" onclick="cleanImages()">
-          </p>
-          <div id="checkImages">
-            <img id="checkImg1" class="checkImgs" src="media/checked.jpg" alt="">
-            <img id="checkImg2" class="checkImgs" src="media/wrong.jpg" alt="">
-            <p class="checkImgs">¡Gracias por jugar!</p>
-          </div>
-     </section>
+     <h3>1. ¿Para que sirve javascript?</h3>
+     <label><input type="checkbox" name="q1" value="p1"> Formularios</label><br>
+     <label><input type="checkbox" name="q1" value="p2"> Juegos</label><br>
+     <label><input type="checkbox" name="q1" value="p3"> Webs</label><br>
+     <p id="q1-result"></p>
+     
+    
+     <h3>2. ¿Es phyton gratuito?</h3>
+     <label><input type="radio" name="q2" value="p4"> Si</label><br>
+     <label><input type="radio" name="q2" value="p5"> No</label><br>
+     <p id="q2-result"></p>
+     
+     
+     <button onclick="checkAnswers()">Comprobar</button>
+     <input type="reset" limpiar onclick="cleanImages()">
+     
+     <script>
+     function checkAnswers() {
+        
+         const q1CorrectAnswers = ["p1, p2, p3"];
+         const q1Answers = Array.from(document.querySelectorAll('input[name="q1"]:checked'))
+                                .map(el => el.value);
+         const q1Result = document.getElementByName('q1-result');
+     
+         if (arraysEqual(q1Answers, q1CorrectAnswers)) {
+             q1Result.textContent = "Correcto!";
+             q1Result.className = "correct";
+         } else {
+             
+             q1Result.className = "incorrect";
+         }
+     
+        
+         const q2CorrectAnswer = "p4";
+         const q2Answer = document.querySelector('input[name="q2"]:checked');
+         const q2Result = document.getElementByName('q2-result');
+     
+         if (q2Answer && q2Answer.value === q2CorrectAnswer) {
+             q2Result.textContent = "Correcto!";
+             q2Result.className = "correct";
+         } else {
+            
+             q2Result.className = "incorrect";
+         }
+     }
+     
+    
+     function arraysEqual(arr1, arr2) {
+         return JSON.stringify(arr1.sort()) === JSON.stringify(arr2.sort());
+     }
+     </script>
+     
+</body>
+     </html>
+     
  
- 
-            </label>
-        </form>
-     </section
+</section>
