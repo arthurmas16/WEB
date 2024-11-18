@@ -11,7 +11,7 @@
         <button>volver</button>
     </a>
 
-</body>
+
 <header><h1>CMS</h1></header>
 <section>
    
@@ -44,30 +44,41 @@
        </div>
       
    </div> 
-</section>
-<section> 
-    <div id="Quiz">
-          
-        <form id="formQuiz" action="">
-          <label for=""><p>Los gestores de contenido se pueden clasificar según su función. ¿Cuales son?</p></label>
-          <input type="radio" name="radio1" value="p2"> WordPress , Foros y Wikis<br>
-          <input type="radio" name="radio2" value="p2"> Foros, Wikis y Aplicaciones Móviles <br>
-          <hr>
-          <label for=""><p>¿Qué significan las siglas de CMS?</p></label>
-          <input type="checkbox" name="checkW1" value="p1"/> Casual Management System <br>
-          <input type="checkbox" name="checkW2" value="p1"/> Colaborative Management System<br>
-          <input type="checkbox" name="checkW3" value="p1"/> Content Management System <br>
-          <br><br>
-          <input type="submit" value="¡Comprueba!"><br><br>
-          <input type="reset" value="Limpiar" onclick="cleanImages()">
-    <form action=""></form>
-  
+
+<section id="seccionTest">
+        <article class="intro">
+          <h3>TEST historia de Internet</h3>
+          <p>Comprueba tus conocimientos completando este test: </p>
+          <div id="contenedorTest">
+            
+            <form id="test" action="">
+              <label for=""><p>¿Cual de estas aplicaciones ha desarrollado Google?</p></label>
+              <input type="checkbox" name="P1" value="1"/> WordPress , Foros y Webs<br>
+              <input type="checkbox" name="P1" value="2"/> WordPress , Foros y Wikis<br>
+              <input type="checkbox" name="P1" value="3"/> Foros, Wikis y Aplicaciones Móviles<br>
+              <hr>
+              <label for=""><p>¿Cual es el motivo por el que se creó internet?</p></label>
+              <input type="radio" name="P2" value="4">Casual Management System <br>
+              <input type="radio" name="P2" value="5">Colaborative Management System <br>
+              <input type="radio" name="P2" value="6">Content Management System<br>
+              <hr>
+              <br><br>
+              <input type="submit" value="¡Comprueba!"><br><br>
+              <input type="reset" value="Limpiar" onclick="cleanImages()">
+            </form>
+            <div id="checkImgs">
+              <img id="imagen1" class="checkImgs" src="../media/checked.jpg" alt="">
+              <img id="imagen2" class="checkImgs" src="../media/wrong.jpg" alt="">
+              <p class="checkImgs">¡Gracias por jugar!</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+    <script src="../script/web.js"></script>
+     
     
-</section>
-<section>
-<script src="../Script/cms.js">
-    
-</script>
-   
-</section> 
+
+
+</body>
 </html>

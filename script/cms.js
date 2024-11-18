@@ -1,39 +1,49 @@
-document.getElementById("formQuiz")
-      .addEventListener('submit', checkQuiz)
+document.getElementById('test').addEventListener('submit', function (event) {
+  event.preventDefault();
+  verificarRespuestas();
+});
 
-    function checkQuiz(event){
-      event.preventDefault();
-      var p1Answers = document.getElementsByName("p1")
-      var imgp1 = document.getElementById("checkImg1")
-      var checkW3 = true
-      for (i=0; i<p1Answers.length;i++){
-        if (!p1Answers[i].checked){
-          p1 = false
-        }
-      }
-      if (!p1){
-        imgp1.src="media/wrong.jpg"
-      }else{imgp1.src="media/checked.jpg"}
+function verificarRespuestas() {  
+ 
+  const checkboxes = Array.from(document.querySelectorAll('input[name="P1"]:checked'));
+  const radios = Array.from(document.querySelectorAll('input[name="P2"]:checked'));
 
-      var p2Answer = document.getElementsByName("p2")
-      var imgElement = document.getElementById("checkImg2")
-      var radio2 = true
-      if (p2Answer[0].checked){
-        imgElement.src="media/checked.jpg"
-      }else{imgElement.src="media/wrong.jpg"}
+  const imagen1 = document.getElementById('imagen1'); 
+  const imagen2 = document.getElementById('imagen2'); 
+ 
+ 
+  imagen1.style.display = 'none';
+  imagen2.style.display = 'none';
 
+   
+  const opcionesCorrectasP1 = checkboxes.some(checkbox => checkbox.value === '1') && 
+                              
+                              checkboxes.length === 1;
 
-      var images = document.getElementsByClassName("checkImgs")
-      for (i = 0; i < images.length; i++){
-        images[i].style.visibility = 'visible'
-      }
+  const opcionesCorrectasP2 = radios.some(radio => radio.value === '5');
+ 
+  if (opcionesCorrectasP1) {
+      imagen1.src = "../media/checked.jpg";
+      imagen1.style.display = 'block';
+  } else {  
+      imagen1.src = "../media/wrong.jpg";
+      imagen1.style.display = 'block';
+  }
 
-    }
+  
+  if (opcionesCorrectasP2) {
+      imagen2.src = "../media/checked.jpg";
+      imagen2.style.display = 'block';
+  } else {  
+      imagen2.src = "../media/wrong.jpg";
+      imagen2.style.display = 'block';
+  }
+}
 
-    function cleanImages(){
-      var images = document.getElementsByClassName("checkImgs")
-      for (i = 0; i < images.length; i++){
-        images[i].style.visibility = 'hidden'
-        images[i].style
-      }
-    }
+function cleanImages() {
+
+  const imagen1 = document.getElementById('imagen1');
+  const imagen2 = document.getElementById('imagen2');
+  imagen1.style.display = 'none';
+  imagen2.style.display = 'none';
+}
