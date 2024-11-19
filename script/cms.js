@@ -16,11 +16,9 @@ function verificarRespuestas() {
   imagen2.style.display = 'none';
 
    
-  const opcionesCorrectasP1 = checkboxes.some(checkbox => checkbox.value === '1') && 
-                              
-                              checkboxes.length === 1;
+  const opcionesCorrectasP1 = checkboxes.some(checkbox => checkbox.value === 'C')
 
-  const opcionesCorrectasP2 = radios.some(radio => radio.value === '5');
+  const opcionesCorrectasP2 = radios.some(radio => radio.value === 'E');
  
   if (opcionesCorrectasP1) {
       imagen1.src = "../media/checked.jpg";

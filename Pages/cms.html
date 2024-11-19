@@ -44,41 +44,72 @@
        </div>
       
    </div> 
+</section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz con Checkbox y Radio</title>
+    <style>
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
 
-<section id="seccionTest">
-        <article class="intro">
-          <h3>TEST historia de Internet</h3>
-          <p>Comprueba tus conocimientos completando este test: </p>
-          <div id="contenedorTest">
-            
-            <form id="test" action="">
-              <label for=""><p>¿Cual de estas aplicaciones ha desarrollado Google?</p></label>
-              <input type="checkbox" name="P1" value="1"/> WordPress , Foros y Webs<br>
-              <input type="checkbox" name="P1" value="2"/> WordPress , Foros y Wikis<br>
-              <input type="checkbox" name="P1" value="3"/> Foros, Wikis y Aplicaciones Móviles<br>
-              <hr>
-              <label for=""><p>¿Cual es el motivo por el que se creó internet?</p></label>
-              <input type="radio" name="P2" value="4">Casual Management System <br>
-              <input type="radio" name="P2" value="5">Colaborative Management System <br>
-              <input type="radio" name="P2" value="6">Content Management System<br>
-              <hr>
-              <br><br>
-              <input type="submit" value="¡Comprueba!"><br><br>
-              <input type="reset" value="Limpiar" onclick="cleanImages()">
-            </form>
-            <div id="checkImgs">
-              <img id="imagen1" class="checkImgs" src="../media/checked.jpg" alt="">
-              <img id="imagen2" class="checkImgs" src="../media/wrong.jpg" alt="">
-              <p class="checkImgs">¡Gracias por jugar!</p>
-            </div>
-          </div>
-        </article>
-      </section>
-
-    <script src="../script/web.js"></script>
-     
-    
+<h3>1.¿Cuales son las siglas de CMS</h3>
+<label><input type="checkbox" name="q1" value="p1"> Content Manager System</label><br>
+<label><input type="checkbox" name="q1" value="p2"> Content Management System</label><br>
+<label><input type="checkbox" name="q1" value="p3"> Colaborative Management System</label><br>
 
 
+<p id="q1-result"></p>
+
+
+<h3>2.¿Que nos permite hacer Google Sites?</h3>
+<label><input type="radio" name="q2" value="p4"> Hacer wikis de una manera más facil</label><br>
+<label><input type="radio" name="q2" value="p5"> Expresar opiniones en un sitio web</label><br>
+<label><input type="radio" name="q2" value="p6"> Permite a los usuarios interactuar y colaborar entre sí</label><br>
+
+
+<p id="q2-result"></p>
+
+
+<button onclick="checkAnswers()">Comprobar</button>
+
+
+<script>
+function checkAnswers() {
+   
+    const q1CorrectAnswers = ["p2"];
+    const q1Answers = Array.from(document.querySelectorAll('input[name="q1"]:checked'))
+                           .map(el => el.value);
+    const q1Result = document.getElementById('q1-result');
+
+    if (arraysEqual(q1Answers, q1CorrectAnswers)) {
+        q1Result.textContent = "Correcto!";
+        q1Result.className = "correct";
+    } else {
+        q1Result.textContent = "Incorrecto, las respuestas correcta es trabajo colaborativo.";
+        q1Result.className = "incorrect";
+    }
+
+    const q2CorrectAnswer = "p4";
+    const q2Answer = document.querySelector('input[name="q2"]:checked');
+    const q2Result = document.getElementById('q2-result');
+
+    if (q2Answer && q2Answer.value === q2CorrectAnswer) {
+        q2Result.textContent = "Correcto!";
+        q2Result.className = "correct";
+    } else {
+        q2Result.textContent = "Incorrecto, la respuesta correcta es hacer wikis de una manera más fácil.";
+        q2Result.className = "incorrect";
+    }
+}
+
+function arraysEqual(arr1, arr2) {
+    return JSON.stringify(arr1.sort()) === JSON.stringify(arr2.sort());
+}
+</script>
 </body>
 </html>
