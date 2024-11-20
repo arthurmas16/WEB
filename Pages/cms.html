@@ -11,7 +11,7 @@
         <button>volver</button>
     </a>
 
-</body>
+
 <header><h1>CMS</h1></header>
 <section>
    
@@ -45,29 +45,71 @@
       
    </div> 
 </section>
-<section> 
-    <div id="Quiz">
-          
-        <form id="formQuiz" action="">
-          <label for=""><p>Los gestores de contenido se pueden clasificar según su función. ¿Cuales son?</p></label>
-          <input type="radio" name="radio1" value="p2"> WordPress , Foros y Wikis<br>
-          <input type="radio" name="radio2" value="p2"> Foros, Wikis y Aplicaciones Móviles <br>
-          <hr>
-          <label for=""><p>¿Qué significan las siglas de CMS?</p></label>
-          <input type="checkbox" name="checkW1" value="p1"/> Casual Management System <br>
-          <input type="checkbox" name="checkW2" value="p1"/> Colaborative Management System<br>
-          <input type="checkbox" name="checkW3" value="p1"/> Content Management System <br>
-          <br><br>
-          <input type="submit" value="¡Comprueba!"><br><br>
-          <input type="reset" value="Limpiar" onclick="cleanImages()">
-    <form action=""></form>
-  
-    
-</section>
-<section>
-<script src="../Script/cms.js">
-    
-</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz con Checkbox y Radio</title>
+    <style>
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+
+<h3>1.¿Cuales son las siglas de CMS</h3>
+<label><input type="checkbox" name="q1" value="p1"> Content Manager System</label><br>
+<label><input type="checkbox" name="q1" value="p2"> Content Management System</label><br>
+<label><input type="checkbox" name="q1" value="p3"> Colaborative Management System</label><br>
+
+
+<p id="q1-result"></p>
+
+
+<h3>2.¿ Como los gestores de contenido se pueden clasificar según su licnecia?</h3>
+<label><input type="radio" name="q2" value="p4"> código abierto o software propietario </label><br>
+<label><input type="radio" name="q2" value="p5"> pueden ser código cerrado o software público </label><br>
+<label><input type="radio" name="q2" value="p6"> código abierto o hardware propietario </label><br>
+
+
+<p id="q2-result"></p>
+
+
+<button onclick="checkAnswers()">Comprobar</button>
+
+
+<script>
+function checkAnswers() {
    
-</section> 
+    const q1CorrectAnswers = ["p2"];
+    const q1Answers = Array.from(document.querySelectorAll('input[name="q1"]:checked'))
+                           .map(el => el.value);
+    const q1Result = document.getElementById('q1-result');
+
+    if (arraysEqual(q1Answers, q1CorrectAnswers)) {
+        q1Result.textContent = "Correcto!";
+        q1Result.className = "correct";
+    } else {
+        q1Result.textContent = "Incorrecto, las respuestas correcta es trabajo colaborativo.";
+        q1Result.className = "incorrect";
+    }
+
+    const q2CorrectAnswer = "p4";
+    const q2Answer = document.querySelector('input[name="q2"]:checked');
+    const q2Result = document.getElementById('q2-result');
+
+    if (q2Answer && q2Answer.value === q2CorrectAnswer) {
+        q2Result.textContent = "Correcto!";
+        q2Result.className = "correct";
+    } else {
+        q2Result.textContent = "Incorrecto, la respuesta correcta es hacer wikis de una manera más fácil.";
+        q2Result.className = "incorrect";
+    }
+}
+
+function arraysEqual(arr1, arr2) {
+    return JSON.stringify(arr1.sort()) === JSON.stringify(arr2.sort());
+}
+</script>
+</body>
 </html>
