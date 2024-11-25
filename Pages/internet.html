@@ -56,21 +56,73 @@
             para conectar entre sí todas las universidades españolas. </div>
            <div class="imagen"> <img src="../Media/iNTERNET3.png" alt=""></div>
         </div> 
-     </section>
-        <section>
-        <h3>1. ¿Donde estuvo la conexión de ARPANET</h3>
-        <label><input type="checkbox" name="q1" value="p1"> Utha</label><br>
-        <label><input type="checkbox" name="q1" value="p2"> California</label><br>
-        <label><input type="checkbox" name="q1" value="p3"> España</label><br>
-        <p id="q1-result"></p>
-        
-       
-        <h3>2. ¿en que año se desarrollo ARPANET?</h3>
-        <label><input type="radio" name="q2" value="p4"> 1969</label><br>
-        <label><input type="radio" name="q2" value="p5"> 1979</label><br>
-        <p id="q2-result"></p>
-</section>
+    </section>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz con Checkbox y Radio</title>
+    <style>
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+
+<h3>1.¿Donde se hizo Arpanet?</h3>
+<label><input type="checkbox" name="q1" value="p1"> La universidad de California</label><br>
+<label><input type="checkbox" name="q1" value="p2"> Departamento de defensa de EEUU</label><br>
+<label><input type="checkbox" name="q1" value="p3"> Base militar de Boston</label><br>
+
+
+<p id="q1-result"></p>
+
+
+<h3>2.¿En que año se creo Arpanet?</h3>
+<label><input type="radio" name="q2" value="p4"> 1969 </label><br>
+<label><input type="radio" name="q2" value="p5"> 1974</label><br>
+<label><input type="radio" name="q2" value="p6"> 1972 </label><br>
+
+
+<p id="q2-result"></p>
+
+
+<button onclick="checkAnswers()">Comprobar</button>
+
+
+<script>
+function checkAnswers() {
+   
+    const q1CorrectAnswers = ["p2"];
+    const q1Answers = Array.from(document.querySelectorAll('input[name="q1"]:checked'))
+                           .map(el => el.value);
+    const q1Result = document.getElementById('q1-result');
+
+    if (arraysEqual(q1Answers, q1CorrectAnswers)) {
+        q1Result.textContent = "Correcto!";
+        q1Result.className = "correct";
+    } else {
+        q1Result.textContent = "Incorrecto.";
+        q1Result.className = "incorrect";
+    }
+
+    const q2CorrectAnswer = "p4";
+    const q2Answer = document.querySelector('input[name="q2"]:checked');
+    const q2Result = document.getElementById('q2-result');
+
+    if (q2Answer && q2Answer.value === q2CorrectAnswer) {
+        q2Result.textContent = "Correcto!";
+        q2Result.className = "correct";
+    } else {
+        q2Result.textContent = "Incorrecto.";
+        q2Result.className = "incorrect";
+    }
+}
+
+function arraysEqual(arr1, arr2) {
+    return JSON.stringify(arr1.sort()) === JSON.stringify(arr2.sort());
+}
+</script>
 </body>
 </html>
-<button onclick="checkAnswers()">Comprobar</button>
-<input type="reset" limpiar onclick="cleanImages()">
+
